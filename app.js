@@ -29,7 +29,9 @@ app.get('/', function(request, response) {
 
 // http://localhost:3000/auth
 app.post('/auth', function(request, response) {
+	response.sendFile(path.join(__dirname + '/static/login2.html'));
 	// Capture the input fields
+	/*
 	let username = request.body.username;
 	let password = request.body.password;
 	// Ensure the input fields exists and are not empty
@@ -54,6 +56,7 @@ app.post('/auth', function(request, response) {
 		response.send('Por favor ingrese Usuario y Contraseña!');
 		response.end();
 	}
+	*/
 });
 
 // http://localhost:3000/home
@@ -70,6 +73,6 @@ app.get('/home', function(request, response) {
 });
 
 
-const server = app.listen(3000, () => {
+const server = app.listen(80, () => {
     console.log('Servidor web iniciado');
 })
