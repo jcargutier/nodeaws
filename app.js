@@ -27,6 +27,13 @@ app.get('/', function(request, response) {
 	response.sendFile(path.join(__dirname + '/static/login.html'));
 });
 
+// http://localhost:3000/
+app.get('/hola', function(request, response) {
+	// Render login template
+	response.sendFile(path.join(__dirname + '/static/login.html'));
+});
+
+
 // http://localhost:3000/auth
 app.post('/auth', function(request, response) {
 	response.sendFile(path.join(__dirname + '/static/login2.html'));
