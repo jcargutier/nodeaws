@@ -80,6 +80,20 @@ app.get('/home', function(request, response) {
 });
 
 
+// http://localhost:3000/productos
+app.get('/productos', function(request, response) {	
+	response.send([
+		{ 
+			productId: '1',
+			precio: 100
+		},
+		{ 
+			productId: '2',
+			precio: 50
+		}	
+	]);
+});
+
 const server = app.listen(3000, () => {
     console.log('Servidor web iniciado');
 })
